@@ -1,0 +1,1 @@
+This animated landing was made on HTML and CSS for the company that specializes in the construction of private houses (brick, wooden, modular). It is simple but stylish, ready for SEO and mobile devices. If someone has a desire to use this landing for their own purposes, then they can replace pictures, headlines, text blocks and links to their own

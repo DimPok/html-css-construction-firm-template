@@ -1,0 +1,1024 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Inter", sans-serif;
+   text-decoration: none;
+   outline: none;  
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #0F2C59;
+}
+
+
+.navbar {
+    width: 100%;
+    height: 10rem;
+    background-color: #0F2C59;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+}
+
+
+
+.domadevelop {
+    position: absolute;
+    top: 50%;
+    left: 8rem;
+    transform: translateY(-50%);
+    display: flex;
+}
+
+
+
+.mainlogo-1 {
+    width: 6rem;
+    height: 6rem;
+    border: .4rem solid #BA704F;
+}
+
+
+.mainlogo-2 {
+    width: 5rem;
+    height: 5rem;
+    border: .4rem solid #DFA878;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+
+.mainlogo-3 {
+    width: 4rem;
+    height: 4rem;
+    border: .4rem solid #FBEEAC;
+    background-color: #0F2C59;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+
+
+.domadevelop span {
+    font-size: 3rem;
+    color: #FFFBF5;
+    letter-spacing: .3rem;
+    margin: 1.5rem 0 0 3rem;
+}
+
+
+
+.search-bar {
+    position: absolute;
+    top: 50%;
+    right: 15rem;
+    transform: translateY(-50%);
+}
+
+
+
+.search-bar input {
+    width: 45rem;
+    height: 4rem;
+    background-color: #4D4D4D;
+    border: none;
+    padding: 2rem 2rem 2rem 4rem;
+    font-size: 1.6rem;
+    color: #ffffff;
+    border-radius: .5rem;
+}
+
+
+.search-bar input::placeholder {
+    color: #ccc;
+}
+
+
+.search-bar i {
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    transform: translateY(-50%);
+    font-size: 1.6rem;
+    color: #ccc;
+}
+
+
+.menushka-icon {
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+    z-index: 100;
+}
+
+
+.line {
+    width: 3rem;
+    height: .2rem;
+    background-color: #bbb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-top: .2rem;
+    transition: all .3s;
+}
+
+
+.change .line-1 {
+    width: 55%;
+    transform: rotateZ(-15deg) translate(-.2rem, .8rem);
+}
+
+
+.change .line-3 {
+    width: 55%;
+    transform: rotateZ(15deg) translate(-.2rem, -.8rem);
+}
+
+
+.navigator {
+    width: 100%;
+    height: 100vh;
+    background-color: #445069;
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: top .3s;
+}
+
+
+.change .navigator {
+    top: 0;
+}
+
+
+.navigator a {
+    font-family: "Oswald", cursive;
+    font-size: 5rem;
+    color: #FFFBF5;
+    letter-spacing: .3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.change .navigator a {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.change .navigator a:nth-child(1) {
+    transition: all .3s .3s;
+}
+
+.change .navigator a:nth-child(2) {
+    transition: all .3s .4s;
+}
+
+.change .navigator a:nth-child(3) {
+    transition: all .3s .5s;
+}
+
+.change .navigator a:nth-child(4) {
+    transition: all .3s .6s;
+}
+
+.change .navigator a:nth-child(5) {
+    transition: all .3s .7s;
+}
+
+.change .navigator a:nth-child(6) {
+    transition: all .3s .8s;
+}
+
+
+.navigator a::before {
+    content: "";
+    width: 15rem;
+    height: .5rem;
+    background-color: #FBEEAC;
+    position: absolute;
+    top: 50%;
+    left: -17rem;
+    transform: translateY(-50%);
+    transform: scale(0);
+    transform-origin: right;
+    transition: transform .3s;
+}
+
+
+.navigator a:hover::before {
+    transform: scale(1);
+}
+
+
+.navigator a::after {
+    content: "";
+    width: 15rem;
+    height: .5rem;
+    background-color: #FBEEAC;
+    position: absolute;
+    top: 50%;
+    right: -17rem;
+    transform: translateY(-50%);
+    transform: scale(0);
+    transform-origin: left;
+    transition: transform .3s;
+}
+
+
+.navigator a:hover::after {
+    transform: scale(1);
+}
+
+
+.maincontent {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+
+
+.maincontent-img {
+    width: 92%;
+    height: 70vh;
+    position: absolute;
+    top: 11rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.maincontent-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .3;
+
+}
+
+
+.graphelement {
+  position: absolute;
+  bottom: 15rem;
+  left: 20rem;
+}
+
+
+.graphelement-zagolovok {
+    font-size: 7rem;
+    color: #FFFBF5;
+}
+
+
+.graphelement-zagolovok span {
+    font-family: "Oswald", cursive;
+    color: #FBEEAC;
+    letter-spacing: .5rem;
+}
+
+
+.graphelement-podzagolovok {
+    display: flex;
+    align-items: center;
+}
+
+
+.graphelement-podzagolovok p {
+    width: 45rem;
+    font-size: 2rem;
+    color: #FFFBF5;
+}
+
+
+.graphelement-podzagolovok button {
+    width: 25rem;
+    height: 5rem;
+    background-color: transparent;
+    border: .3rem solid #FFFBF5;
+    color: #FFFBF5;
+    font-size: 1,5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.pronas {
+    width: 100%;
+    height: 75vh;
+    background-color: #0F2C59;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+
+.pronas-left h2 {
+    font-size: 5rem;
+    color: #FBEEAC;
+    width: 50rem;
+    margin-bottom: 6rem;
+}
+
+
+
+.pronas-left p {
+    font-size: 2rem;
+    color: #FFFBF5;
+    width: 50rem;
+    margin-bottom: 5rem;
+}
+
+
+.pronas-left button {
+    width: 18rem;
+    height: 5rem;
+    background-color: transparent;
+    border: .2rem solid #FFFBF5;
+    color: #ffffff;
+    font-size: 1.3rem;
+    cursor: pointer;
+
+}
+
+
+
+.frame {
+    width: 50rem;
+    height: 35rem;
+    border: 3rem solid #19376D;
+    position: absolute;
+    top: 15rem;
+    right: 40rem;
+}
+
+
+
+.pronas-img-wrapper {
+    width: 50rem;
+    height: 35rem;
+    position: absolute;
+    top: 8rem;
+    right: 33rem;
+}
+
+
+.pronas-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.section-bottom {
+    position: absolute;
+    bottom: 2rem;
+    right: 33rem;
+    height: 12rem;
+    border-right: 1rem solid #FBEEAC;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+
+.section-bottom h2 {
+    font-family: "Oswald", cursive;
+    font-size: 3.5rem;
+    color: #FBEEAC;
+}
+
+
+.section-bottom h3 {
+    font-size: 2.5rem;
+    color: #FFFBF5;
+}
+
+
+.nashidoma {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+.nashidoma-zagolovok {
+    font-size: 5rem;
+    color: #FFFBF5;
+    letter-spacing: .2rem;
+    margin: 7rem 0 10rem 9rem;
+}
+
+
+.cards {
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+
+
+.card {
+    width: 32rem;
+    height: 50rem;
+    margin-right: 2.5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.card-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color .6s;
+    
+
+}
+
+
+.card-content::before {
+    content: "";
+    width: 92%;
+    height: .1rem;
+    background-color: #FBEEAC;
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    transform: scale(0);
+    transform-origin: left;
+    transition: transform .7s;
+}
+
+
+.card:hover .card-content::before {
+    transform: scale(1);
+}
+
+
+.card:hover .card-content {
+    background-color: rgba(0, 0, 0, .9);
+}
+
+
+.card-content::after {
+    content: "";
+    width: .1rem;
+    height: 94%;
+    background-color: #FBEEAC;
+    position: absolute;
+    left: 2rem;
+    top: 0;
+    transform: scale(0);
+    transform-origin: top;
+    transition: transform .8s;
+}
+
+
+.card:hover .card-content::after {
+    transform: scale(1);
+}
+
+
+
+.card-content h2 {
+    font-size: 1.5rem;
+    color: #FFFBF5;
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    width: 15rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+}
+
+
+.card:hover .card-content h2 {
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s .6s;
+}
+
+
+.card-content p {
+    font-size: 1.4rem;
+    color: #FFFBF5;
+    position: absolute;
+    top: 13rem;
+    left: 4rem;
+    width: 17rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+}
+
+
+.card:hover .card-content p {
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s .6s;
+}
+
+
+.spisokdomov {
+    right: 12rem;
+}
+
+
+
+.nashiotzyvi {
+    width: 100%;
+    height: 60vh;
+    background-color: #445069;
+    padding-top: 5rem;
+    position: relative;
+}
+
+
+.nashiotzyvi-zagolovok {
+    font-size: 5rem;
+    color: #FFFBF5;
+    margin: 0 0 10rem 9rem;
+    letter-spacing: .2rem;
+}
+
+
+.nashiotzyvi-content {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.nashiotzyvi-card {
+    position: relative;
+}
+
+
+.nashiotzyvi-card img {
+    width: 20rem;
+    height: 15rem;
+    position: absolute;
+    top: -5rem;
+    right: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0.5rem .5rem rgba(0, 0, 0, .1);
+    
+}
+
+
+.nashiotzyvi-card-content {
+    width: 50rem;
+    height: 22rem;
+    background-color: #4D4D4D;
+    border-radius: .5rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, .2);
+    padding: 2rem;
+    margin-right: 2rem;
+}
+
+
+
+.nashiotzyvi-card-content h2 {
+    font-size: 2rem;
+    color: #FFFBF5;
+    margin-bottom: 1rem;
+}
+
+
+.nashiotzyvi-card-content h3 {
+    font-size: 1.4rem;
+    color: #FBEEAC;
+    margin-bottom: 4rem;
+}
+
+
+.nashiotzyvi-card-content p {
+    font-size: 1.5rem;
+    color: #FFFBF5;
+    font-weight: 300;
+  
+}
+
+
+.nashykontakty {
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.nashykontakty-content {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.nashykontakty-content h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #ccc
+}
+
+
+.nashykontakty-content input {
+    width: 45rem;
+    height: 4rem;
+    background-color: transparent;
+    padding: 1.5rem 1.5rem 2.2rem 0;
+    border: none;
+    border-bottom: .1rem solid #777;
+    font-size: 1.5rem;
+    color: #ccc;
+    transition: border-bottom .3s;
+}
+
+
+.nashykontakty-content input:focus {
+    border-bottom: .1rem solid #FBEEAC;
+}
+
+
+
+.nashykontakty-content input::placeholder {
+    color: #ccc;
+    letter-spacing: .1rem;
+}
+
+
+.nashykontakty-right button {
+    width: 20rem;
+    height: 4rem;
+    background-color: #D0C9C0;
+    border-radius: 3rem;
+    font-size: 1.8rem;
+    color: #141E27;
+    cursor: pointer;
+}
+
+
+.podval {
+    width: 100%;
+    height: 7rem;
+    background-color: #141E27;
+    border-top: .1rem solid #3e3e41;
+    position: relative;
+}
+
+
+
+
+.podval {
+    width: 100%;
+    height: 10rem;
+    border-top: .1rem solid #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+} 
+
+
+.copyright, .organisation {
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+.organisation span {
+    font-family: "Rubik", cursive;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #777;
+}
+
+
+
+@media(max-width: 1700px ) {
+    .graphelement {
+        left: 12rem;
+    }
+
+
+    .pronas-right {
+        margin-right: 20rem;
+    }
+
+
+    .frame {
+        width: 45rem;
+        height: 30rem;
+        right: 20rem;
+    }
+
+
+    .pronas-img-wrapper {
+        width: 45rem;
+        height: 30rem;
+        right: 13rem;
+    }
+
+
+    .experience {
+        right: 20rem;
+    }
+
+
+    .nashidoma {
+        height: 100%;
+    }
+
+
+    .cards {
+        width: 80%;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 25rem;
+    }
+
+
+    .card {
+        margin: 1.5rem;
+    }
+
+
+    .nashiotzyvi-content {
+        width: 90%;
+    }
+
+
+    .nashiotzyvi {
+        right: 20rem;
+    }
+
+
+    .nashykontakty-content {
+        width: 90%;
+    }
+
+
+    .podval .organisation {
+        left: 16%;
+    }
+
+
+    .copyright {
+        right: 16%;
+    }
+}
+
+
+@media(max-width: 1400px ) {
+    html {
+        font-size: 55%;
+    }
+
+    .frame {
+        width: 40rem;
+        height: 25rem;
+        right: 15rem;
+    }
+
+
+    .pronas-img-wrapper {
+        width: 40rem;
+        height: 25rem;
+        right: 8rem;
+    }
+
+
+    .experience {
+        right: 12rem;
+    }
+}
+
+
+@media(max-width: 1200px ) {
+    html{
+        font-size: 49%;
+    }
+
+    .pronas-left p {
+       width: 40rem;
+    }
+
+
+    .nashiotzyvi-content {
+        width: 100%;
+    }
+
+
+    .nashiotzyvi {
+        right: 10rem;
+    }
+
+    .nashykontakty-content {
+        width: 100%;
+    }
+
+
+    .podval .organisation {
+        left: 10%;
+    }
+
+
+    .copyright {
+       right: 10%;
+    }
+}
+
+
+@media(max-width: 900px ) {
+    html {
+        font-size: 45%;
+    }
+
+
+    .search-bar input {
+        width: 30rem;
+    }
+
+
+    .graphelement-zagolovok {
+        font-size: 7rem;
+    }
+
+
+    .graphelement-zagolovok span {
+        font-size: 7rem;
+    }
+
+
+    .graphelement-podzagolovok p {
+        font-size: 1.7rem;
+        width: 35rem;
+    }
+
+
+    .pronas-left h2 {
+       font-size: 3rem;
+       width: 35rem;
+    }
+
+
+    .pronas-left p {
+        font-size: 1.7rem;
+        width: 35rem;
+    }
+
+
+    .frame {
+        width: 30rem;
+        height: 15rem;
+        border: 1.5rem solid #777;
+        right: 10rem;
+    }
+
+
+    .pronas-img-wrapper {
+        width: 30rem;
+        height: 15rem;
+        top: 12rem;
+        right: 7rem;
+    }
+
+
+    .experience {
+        right: 7rem;
+    }
+
+
+    .nashiotzyvi {
+        height: 100%;
+        padding-bottom: 12rem;
+    }
+
+
+    .nashiotzyvi-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .nashiotzyvi-card {
+        margin: 8rem;
+    }
+
+
+    .nashykontakty-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media(max-width: 600px ) {
+    html {
+        font-size: 35%;
+    }
+
+    .domadevelop span {
+        display: none;
+    }
+
+
+    .navigator a {
+        font-size: 3rem;
+    }
+
+
+    .navigator a::before, .navigator a::after {
+        width: 10rem;
+    }
+
+
+    .navigator a::before {
+        left: -13rem;
+    }
+
+
+    .navigator a::after {
+        right: -13rem;
+    }
+
+
+    .graphelement {
+        left: 5rem;
+        bottom: 18rem;
+    }
+
+
+    .graphelement-zagolovok {
+        font-size: 5rem;
+    }
+
+
+    .graphelement-zagolovok span {
+        font-size: 4rem;
+    }
+
+
+    .pronas {
+        height: 100%;
+        justify-content: center;
+        padding: 10rem 0 25rem 0;
+    }
+
+
+    .pronas-left {
+        text-align: center;
+        margin-right: 0;
+    }
+
+
+    .pronas-right {
+        display: none;
+    }
+
+
+    .nashidoma-zagolovok {
+        font-size: 5rem;
+    }
+
+
+    .nashiotzyvi-zagolovok {
+        font-size: 5rem;
+    }
+}
